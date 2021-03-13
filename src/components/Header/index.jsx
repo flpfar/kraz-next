@@ -1,54 +1,29 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import * as Styled from './styles';
+import MenuItems from './MenuItems';
+import Socials from "../Socials";
 
 const Header = () => {
-  const [toggle, toggleNav] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
       <Styled.Nav>
-        <Styled.Logo href="/">
-          <img src="/kraz-logo.webp" alt="" width="140" />
-        </Styled.Logo>
+        <Link href="/">
+          <a onClick={() => setIsNavOpen(false)}><img src="/kraz-logo.webp" alt="" width="140" /></a>
+        </Link>
         <Styled.Menu>
-          <Styled.Item>
-            <Styled.Link target="#" href="#">
-              Quem Somos
-            </Styled.Link>
-          </Styled.Item>
-          <Styled.Item>
-            <Styled.Link target="#" href="#">
-              O Que Fazemos
-            </Styled.Link>
-          </Styled.Item>
-          <Styled.Item>
-            <Styled.Link target="#" href="#">
-              Contato
-            </Styled.Link>
-          </Styled.Item>
+          <MenuItems setIsNavOpen={setIsNavOpen} />
         </Styled.Menu>
-        <Styled.NavIcon onClick={() => toggleNav(oldToggle => !oldToggle)}>
-          <Styled.Line open={toggle} />
-          <Styled.Line open={toggle} />
-          <Styled.Line open={toggle} />
+        <Styled.NavIcon onClick={() => setIsNavOpen(oldToggle => !oldToggle)}>
+          <Styled.Line open={isNavOpen} />
+          <Styled.Line open={isNavOpen} />
+          <Styled.Line open={isNavOpen} />
         </Styled.NavIcon>
       </Styled.Nav>
-      <Styled.Overlay open={toggle}>
-        <Styled.OverlayMenu open={toggle}>
-          <Styled.Item>
-            <Styled.Link target="#" href="#">
-              Quem Somos
-            </Styled.Link>
-          </Styled.Item>
-          <Styled.Item>
-            <Styled.Link target="#" href="#">
-              O Que Fazemos
-            </Styled.Link>
-          </Styled.Item>
-          <Styled.Item>
-            <Styled.Link target="#" href="#">
-              Contato
-            </Styled.Link>
-          </Styled.Item>
+      <Styled.Overlay open={isNavOpen}>
+        <Styled.OverlayMenu open={isNavOpen}>
+          <MenuItems setIsNavOpen={setIsNavOpen} />
         </Styled.OverlayMenu>
       </Styled.Overlay>
     </>

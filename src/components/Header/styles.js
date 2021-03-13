@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from '../../pages/styles/globals'
 
 export const Nav = styled.nav`
   padding: 0 20px;
@@ -12,30 +13,17 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Logo = styled.a``;
-
 export const Menu = styled.ul`
-  list-style: none;
-  display: flex;
-  margin: 0;
+  display: none;
 
-  li:nth-child(2) {
-    margin: 0px 50px;
-  }
+  @media (min-width: 768px) {
+    list-style: none;
+    display: flex;
+    margin: 0;
 
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export const Item = styled.li``;
-
-export const Link = styled.a`
-  color: white;
-  text-decoration: none;
-
-  :hover {
-    text-decoration: underline;
+    li:nth-child(2) {
+      margin: 0px 50px;
+    }
   }
 `;
 
@@ -55,21 +43,31 @@ export const Line = styled.span`
   border-radius: 50px;
   width: 25px;
   height: 3px;
-  margin: 5px;
-  background-color: #fff;
+  margin: 5px 0;
+  background-color: ${theme.colors.primary};
   transition: width 0.4s ease-in-out;
 
   :nth-child(2) {
-    width: ${(props) => (props.open ? "40%" : "70%")};
+    width: ${(props) => (props.open ? "40%" : "100%")};
   }
 `;
 
 export const Overlay = styled.div`
   position: absolute;
-  height: ${(props) => (props.open ? "90vh" : 0)};
+  height: ${(props) => (props.open ? "84vh" : 0)};
   width: 100vw;
-  background: var(--background-gradient);
+  background: ${theme.gradients.background};
   transition: height 0.4s ease-in-out;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  z-index: 1;
+
+  footer {
+    opacity: ${(props) => (props.open ? 1 : 0)};
+    transition: opacity 0.4s ease-in-out;
+    color: ${theme.colors.primary};
+  }
 
   @media (min-width: 769px) {
     display: none;
@@ -78,16 +76,19 @@ export const Overlay = styled.div`
 
 export const OverlayMenu = styled.ul`
   list-style: none;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
+  margin-top: -32px;
 
   li {
-    opacity: ${(props) => (props.open ? 1 : 0)};
+    span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: ${theme.colors.secondary};
+      margin-right: 8px;
+    }
+
     font-size: 25px;
     margin: 50px 0px;
-    transition: opacity 0.4s ease-in-out;
   }
 
   li:nth-child(2) {

@@ -1,14 +1,16 @@
-import Footer from '../components/Footer'
 import Header from '../components/Header'
-import '../styles/globals.css'
+import Content from '../components/Content'
+import Footer from '../components/Footer'
+import * as Styled from './styles/globals'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Styled.Globals />
       <Header />
-      
-      <Component {...pageProps} />
-
+      <Content>
+        <Component {...pageProps} />
+      </Content>
       <Footer />
     </>
   )
