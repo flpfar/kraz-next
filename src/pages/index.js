@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import * as Styled from "./styles/Home";
+import * as Styled from "./styles/homeStyles";
 
 export default function Home() {
   return (

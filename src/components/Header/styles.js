@@ -6,10 +6,10 @@ export const Nav = styled.nav`
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 
-  @media (max-width: 768px) {
-    align-items: center;
+  @media (min-width: 768px) {
+    align-items: flex-end;
   }
 `;
 

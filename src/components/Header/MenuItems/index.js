@@ -13,14 +13,14 @@ export default function MenuItems({setIsNavOpen}) {
       </Styled.Item>
       <Styled.Item>
         <Link href="/">
-          <Styled.Link>
+          <Styled.Link onClick={() => setIsNavOpen(false)}>
             <span />O Que Fazemos
           </Styled.Link>
         </Link>
       </Styled.Item>
       <Styled.Item>
-        <Link href="/">
-          <Styled.Link>
+        <Link href="/contact">
+          <Styled.Link onClick={() => setIsNavOpen(false)}>
             <span />Contato
           </Styled.Link>
         </Link>

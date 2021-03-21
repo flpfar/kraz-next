@@ -83,7 +83,7 @@ export const RightSection = styled.section`
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: contain;
-    animation: 30s -30s move infinite ease-in-out alternate;
+    /* animation: 30s -30s move infinite ease-in-out alternate; */
   }
 
   @media (min-width: 769px) {
