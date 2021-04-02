@@ -5,6 +5,7 @@ export const Main = styled.main`
   @media (min-width: 769px) {
     display: grid;
     grid-template-columns: 320px 1fr;
+    align-items: center;
   }
 `;
 
