@@ -12,7 +12,7 @@ export default function MenuItems({setIsNavOpen}) {
         </Link>
       </Styled.Item>
       <Styled.Item>
-        <Link href="/">
+        <Link href="/services">
           <Styled.Link onClick={() => setIsNavOpen(false)}>
             <span />O Que Fazemos
           </Styled.Link>

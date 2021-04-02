@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  padding: 0 20px;
+  padding: 0 2rem;
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -9,6 +9,7 @@ export const Nav = styled.nav`
 
   @media (min-width: 768px) {
     align-items: flex-end;
+    padding: 0 1rem;
   }
 `;
 
