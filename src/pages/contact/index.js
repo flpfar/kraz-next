@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <Styled.Main>
       <Head>
-        <title>Kraz - Quem Somos | Brand Experience</title>
+        <title>Kraz - Contato | Marketing Digital</title>
       </Head>
       <Styled.Info>
         <h1>

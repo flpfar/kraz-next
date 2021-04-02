@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Styled.Main>
       <Head>
-        <title>Kraz - Página Inicial | Brand Experience</title>
+        <title>Kraz - Página Inicial | Marketing Digital</title>
       </Head>
       <Styled.LeftSection>
         <h3 title="Soluções criativas">

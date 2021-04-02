@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Main = styled.main`
   display: flex;
@@ -8,6 +8,7 @@ export const Main = styled.main`
   @media (min-width: 1080px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
     align-items: center;
   }
 `;
@@ -16,18 +17,20 @@ export const Info = styled.div`
   color: ${({ theme }) => theme.colors.primary};
 
   h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
     strong {
       color: ${({ theme }) => theme.colors.secondary};
     }
   }
 
   h2 {
-    margin: 1.4rem 0 1rem;
+    margin: 1.8rem 0 1rem;
   }
 
   p {
     line-height: 1.2;
-    margin-top: 1rem;
 
     strong {
       font-size: 1.2rem;
@@ -44,7 +47,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
 `;
-  
+
 const inputStyle = css`
   border: none;
   margin: 0.2rem 0;
