@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import { theme } from '../../../pages/styles/globals'
 
 export const Item = styled.li``;
 
 export const Link = styled.a`
-  color: ${theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
   cursor: pointer;
   padding: 16px;
@@ -12,7 +11,7 @@ export const Link = styled.a`
   transition: all 0.5s ease;
 
   &:hover {
-    background-color: ${theme.colors.secondary};
-    color: ${theme.colors.textDark};
+    background-color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.textDark};
   }
 `;

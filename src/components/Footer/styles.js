@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { theme } from '../../pages/styles/globals'
 
 export const Footer = styled.footer`
   height: 6vh;
@@ -9,5 +8,5 @@ export const Footer = styled.footer`
   padding: 0 16px;
   font-size: 0.8rem;
   text-align: center;
-  color: ${theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
 `;

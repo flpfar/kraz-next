@@ -1,5 +1,5 @@
 import Head from "next/head";
-import * as Styled from "./styles/aboutStyles";
+import * as Styled from "./styles";
 
 export default function About() {
   return (

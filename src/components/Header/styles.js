@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from '../../pages/styles/globals'
 
 export const Nav = styled.nav`
   padding: 0 20px;
@@ -22,7 +21,7 @@ export const Menu = styled.ul`
     margin: 0;
 
     li:nth-child(2) {
-      margin: 0px 50px;
+      margin: 0px 40px;
     }
   }
 `;
@@ -44,7 +43,7 @@ export const Line = styled.span`
   width: 25px;
   height: 3px;
   margin: 5px 0;
-  background-color: ${theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   transition: width 0.4s ease-in-out;
 
   :nth-child(2) {
@@ -56,7 +55,7 @@ export const Overlay = styled.div`
   position: absolute;
   height: ${(props) => (props.open ? "84vh" : 0)};
   width: 100vw;
-  background: ${theme.gradients.background};
+  background: ${({ theme }) => theme.gradients.background};
   transition: height 0.4s ease-in-out;
   display: grid;
   place-items: center;
@@ -66,7 +65,7 @@ export const Overlay = styled.div`
   footer {
     opacity: ${(props) => (props.open ? 1 : 0)};
     transition: opacity 0.4s ease-in-out;
-    color: ${theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   @media (min-width: 769px) {
@@ -83,7 +82,7 @@ export const OverlayMenu = styled.ul`
       display: inline-block;
       width: 10px;
       height: 10px;
-      background-color: ${theme.colors.secondary};
+      background-color: ${({ theme }) => theme.colors.secondary};
       margin-right: 8px;
     }
 

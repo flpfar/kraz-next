@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from './globals';
 
 export const Main = styled.main`
   height: 100%;
@@ -11,35 +10,28 @@ export const Main = styled.main`
 
 export const LeftSection = styled.section`
   h3 {
-    span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background-color: ${theme.colors.secondary};
-      margin-right: 8px;
-    }
-    color: ${theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
     display: inline-block;
     margin: 0;
   }
 
   h1 {
-    color: ${theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
     font-size: 2.4rem;
     font-weight: 700;
     margin-top: 16px;
   }
 
   p {
-    color: ${theme.colors.text};
+    color: ${({ theme }) => theme.colors.text};
     line-height: 1.6;
     font-size: 0.9rem;
   }
 
   a {
     display: inline-block;
-    color: ${theme.colors.textDark};
-    background-color: ${theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.textDark};
+    background-color: ${({ theme }) => theme.colors.secondary};
     border: none;
     border-radius: 4px;
     padding: 8px 16px;

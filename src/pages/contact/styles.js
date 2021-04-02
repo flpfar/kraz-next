@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { theme } from './globals';
 
 export const Main = styled.main`
   height: 100%;
@@ -10,7 +9,27 @@ export const Main = styled.main`
 `;
 
 export const Info = styled.div`
-  color: ${theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
+  margin-bottom: 1rem;
+
+  h1 {
+    strong {
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
+
+  h3 {
+    margin: 1rem 0;
+  }
+
+  p {
+    line-height: 1.2;
+    margin-top: 1rem;
+
+    strong {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 export const Form = styled.form`
@@ -36,7 +55,7 @@ export const Input = styled.input`
 `;
 
 export const SubmitButton = styled.button`
-  background-color: ${theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.secondary};
   border: none;
   margin-top: 0.5rem;
   padding: 0.6rem;

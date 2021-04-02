@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import * as Styled from './styles';
 import MenuItems from './MenuItems';
-import Socials from "../Socials";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);

@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { SocialIcon } from 'react-social-icons';
-import { theme } from '../../pages/styles/globals';
+import { ThemeContext } from 'styled-components';
 import * as Styled from './styles'
 
 export default function Socials({ iconSize }) {
+  const theme = useContext(ThemeContext);
+
   return (
     <Styled.List>
       <Styled.Item>

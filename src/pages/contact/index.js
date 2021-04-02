@@ -1,5 +1,6 @@
-import * as Styled from "./styles/contactStyles";
+import * as Styled from "./styles";
 import Head from "next/head";
+import Socials from '../../components/Socials';
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Contact() {
@@ -15,7 +16,14 @@ export default function Contact() {
         <title>Kraz - Quem Somos | Brand Experience</title>
       </Head>
       <Styled.Info>
-        Teste
+        <h1><strong>&gt;</strong> Contato</h1>
+        <div>
+          <p>Tem dúvidas sobre como podemos <strong>te ajudar?</strong> Manda pra gente!</p>
+          <p></p>
+          <p>Entraremos em contato o mais rápido possível.</p>
+          <h3><span className="item-square" />Redes sociais</h3>
+          <Socials iconSize={30} />
+        </div>
       </Styled.Info>
       <Styled.Form onSubmit={handleSubmit}>
         <Styled.Input

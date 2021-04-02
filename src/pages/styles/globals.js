@@ -1,19 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-export const theme = {
-  colors: {
-    background: "#1c2022",
-    primary: "#eee",
-    secondary: "#facb06",
-    text: "#aaa",
-    textDark: "rgba(0,17,20,1)",
-  },
-  gradients: {
-    background:
-      "linear-gradient(283deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 26%, rgba(0,17,20,1) 100%)",
-  },
-};
-
 export const Globals = createGlobalStyle`
   * {
     padding: 0;
@@ -22,7 +8,7 @@ export const Globals = createGlobalStyle`
   }
 
   body {
-    background: ${theme.gradients.background};
+    background: ${({ theme }) => theme.gradients.background};
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
@@ -34,6 +20,14 @@ export const Globals = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  span.item-square {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: ${({ theme }) => theme.colors.secondary};
+    margin-right: 8px;
   }
 
   @media (min-width: 769px) {
