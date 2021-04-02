@@ -3,7 +3,7 @@ export const theme = {
     background: "#1c2022",
     primary: "#eee",
     secondary: "#facb06",
-    text: "#aaa",
+    text: "#ccc",
     textDark: "rgba(0,17,20,1)",
   },
   gradients: {

@@ -4,21 +4,30 @@ import * as Styled from "./styles";
 
 export default function Home() {
   return (
-      <Styled.Main>
-        <Head>
-          <title>Kraz - Página Inicial | Brand Experience</title>
-        </Head>
-        <Styled.LeftSection>
-          <h3><span className="item-square" />BRAND</h3>
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sint est inventore atque et accusantium aperiam corporis consequatur earum at exercitationem officiis vero rem illum dolorem, nobis repellendus ipsam saepe.</p>
-          <Link href="/about">
-            <a>Quem somos</a>
-          </Link>
-        </Styled.LeftSection>
-        <Styled.RightSection>
-          <div></div>
-        </Styled.RightSection>
-      </Styled.Main>
+    <Styled.Main>
+      <Head>
+        <title>Kraz - Página Inicial | Brand Experience</title>
+      </Head>
+      <Styled.LeftSection>
+        <h3 title="Soluções criativas">
+          <span className="item-square" />
+          SOLUÇÕES CRIATIVAS
+        </h3>
+        <h1>Aumente sua visibilidade no mercado digital</h1>
+        <p>
+          Se você busca crescer no mercado digital de forma orgânica, alcançando
+          o seu público, engajando e aumentando suas vendas, a
+          <strong> KRAZ</strong> é para o seu negócio. Nosso trabalho é
+          reconhecido por empresas de pequeno e médio porte, startups e agora
+          por você. Somos famintos por experiências de sucesso.
+        </p>
+        <Link href="/about">
+          <a>Quem somos</a>
+        </Link>
+      </Styled.LeftSection>
+      <Styled.RightSection>
+        <div></div>
+      </Styled.RightSection>
+    </Styled.Main>
   );
 }
