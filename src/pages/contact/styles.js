@@ -2,16 +2,15 @@ import styled, { css } from 'styled-components';
 
 export const Main = styled.main`
   height: 100%;
-  @media (min-width: 769px) {
+  @media (min-width: 1080px) {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 `;
 
 export const Info = styled.div`
   color: ${({ theme }) => theme.colors.primary};
-  margin-bottom: 1rem;
 
   h1 {
     strong {
@@ -30,6 +29,10 @@ export const Info = styled.div`
     strong {
       font-size: 1.2rem;
     }
+  }
+
+  @media (max-width: 1080px) {
+    margin-bottom: 2rem;
   }
 `;
 

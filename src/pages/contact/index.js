@@ -16,7 +16,7 @@ export default function Contact() {
         <title>Kraz - Quem Somos | Brand Experience</title>
       </Head>
       <Styled.Info>
-        <h1><strong>&gt;</strong> Contato</h1>
+        <h1><span className="item-square" />Contato</h1>
         <div>
           <p>Tem dúvidas sobre como podemos <strong>te ajudar?</strong> Manda pra gente!</p>
           <p></p>
