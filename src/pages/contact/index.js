@@ -1,7 +1,7 @@
 import * as Styled from "./styles";
 import Head from "next/head";
-import Socials from '../../components/Socials';
-import { useForm, ValidationError } from '@formspree/react';
+import Socials from "../../components/Socials";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("mgepgnka");
@@ -16,12 +16,20 @@ export default function Contact() {
         <title>Kraz - Quem Somos | Brand Experience</title>
       </Head>
       <Styled.Info>
-        <h1><span className="item-square" />Contato</h1>
+        <h1>
+          <span className="item-square" />
+          Contato
+        </h1>
         <div>
-          <p>Tem dúvidas sobre como podemos <strong>te ajudar?</strong> Manda pra gente!</p>
-          <p></p>
-          <p>Entraremos em contato o mais rápido possível.</p>
-          <h3><span className="item-square" />Redes sociais</h3>
+          <p>
+            Tem dúvidas sobre como podemos <strong>te ajudar?</strong> Manda pra
+            gente! <br />
+            Entraremos em contato o mais rápido possível.
+          </p>
+          <h2>
+            <span className="item-square" />
+            Redes sociais
+          </h2>
           <Socials iconSize={30} />
         </div>
       </Styled.Info>
@@ -33,11 +41,7 @@ export default function Contact() {
           maxlength="155"
           placeholder="Nome"
         />
-        <ValidationError 
-          prefix="Name" 
-          field="name"
-          errors={state.errors}
-        />
+        <ValidationError prefix="Name" field="name" errors={state.errors} />
         <Styled.Input
           type="email"
           id="email"
@@ -45,19 +49,15 @@ export default function Contact() {
           maxlength="254"
           placeholder="Email"
         />
-        <ValidationError 
-          prefix="Email" 
-          field="email"
-          errors={state.errors}
-        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
         <Styled.TextArea
           id="message"
           name="message"
           placeholder="Mensagem"
           rows="5"
         />
-        <ValidationError 
-          prefix="Message" 
+        <ValidationError
+          prefix="Message"
           field="message"
           errors={state.errors}
         />

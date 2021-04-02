@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components';
 
 export const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   @media (min-width: 1080px) {
     display: grid;
@@ -18,8 +21,8 @@ export const Info = styled.div`
     }
   }
 
-  h3 {
-    margin: 1rem 0;
+  h2 {
+    margin: 1.4rem 0 1rem;
   }
 
   p {

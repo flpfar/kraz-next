@@ -15,11 +15,11 @@ export default function Home() {
         </h3>
         <h1>Aumente sua visibilidade no mercado digital</h1>
         <p>
-          Se você busca crescer no mercado digital de forma orgânica, alcançando
-          o seu público, engajando e aumentando suas vendas, a
-          <strong> KRAZ</strong> é para o seu negócio. Nosso trabalho é
-          reconhecido por empresas de pequeno e médio porte, startups e agora
-          por você. Somos famintos por experiências de sucesso.
+          Se você busca crescer no mercado digital de forma orgânica, engajando
+          o seu público e aumentando suas vendas, a<strong> KRAZ</strong> é para
+          o seu negócio. Nosso trabalho é reconhecido por empresas de pequeno e
+          médio porte, startups e agora por você. Somos famintos por
+          experiências de sucesso.
         </p>
         <Link href="/about">
           <a>Quem somos</a>

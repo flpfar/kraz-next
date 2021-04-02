@@ -9,6 +9,11 @@ export const Main = styled.main`
 `;
 
 export const LeftSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
   h3 {
     color: ${({ theme }) => theme.colors.primary};
     display: inline-block;
@@ -26,20 +31,21 @@ export const LeftSection = styled.section`
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.6;
     font-size: 0.9rem;
+    margin: 1rem 0 0;
   }
 
   a {
     display: inline-block;
-    color: ${({ theme }) => theme.colors.textDark};
-    background-color: ${({ theme }) => theme.colors.secondary};
-    border: none;
+    align-self: flex-start;
+    color: ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.secondary};
     border-radius: 4px;
     padding: 8px 16px;
     margin-top: 32px;
     font-weight: 600;
 
     &:hover {
-      filter: brightness(120%);
+      filter: brightness(0.8);
     }
   }
 
@@ -50,7 +56,7 @@ export const LeftSection = styled.section`
     align-items: flex-start;
 
     p {
-      margin: 24px 0;
+      margin: 1.5rem 0 0;
     }
   }
 `;
