@@ -20,20 +20,20 @@ export default function Contact() {
           <span className="item-square" />
           Contato
         </h1>
-        <div>
-          <p>
-            Tem dúvidas sobre como podemos <strong>te ajudar?</strong> Manda pra
-            gente! <br />
-            Entraremos em contato o mais rápido possível.
-          </p>
-          <h2>
-            <span className="item-square" />
-            Redes sociais
-          </h2>
-          <Socials iconSize={30} />
-        </div>
+        <p><strong>Email:</strong> agenciakraz@gmail.com</p>
+        <p><strong>Whatsapp/Telefone:</strong> +55 11 91148-5581</p>
+        <p><strong>São Paulo - Brasil</strong></p>
+        <h2>
+          <span className="item-square" />
+          Redes sociais
+        </h2>
+        <Socials iconSize={30} />
       </Styled.Info>
       <Styled.Form onSubmit={handleSubmit}>
+        <p>
+          Tem dúvidas sobre como podemos <strong>te ajudar?</strong> Manda pra
+          gente! Entraremos em contato o mais rápido possível.
+        </p>
         <Styled.Input
           type="text"
           id="name"

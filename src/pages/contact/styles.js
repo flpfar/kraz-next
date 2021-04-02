@@ -30,11 +30,7 @@ export const Info = styled.div`
   }
 
   p {
-    line-height: 1.2;
-
-    strong {
-      font-size: 1.2rem;
-    }
+    line-height: 1.8;
   }
 
   @media (max-width: 1080px) {
@@ -46,6 +42,11 @@ export const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  p {
+    color: ${({ theme }) => theme.colors.text};
+    margin-bottom: 1rem;
+  }
 `;
 
 const inputStyle = css`
