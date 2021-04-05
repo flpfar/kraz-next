@@ -1,4 +1,4 @@
-import * as Styled from "./styles";
+import * as Styled from "../../styles/pages/contact";
 import Head from "next/head";
 import Socials from "../../components/Socials";
 import { useForm, ValidationError } from "@formspree/react";

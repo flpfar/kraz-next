@@ -1,4 +1,4 @@
-import * as Styled from "./styles";
+import * as Styled from "../../styles/pages/about";
 import Head from "next/head";
 
 export default function About() {
